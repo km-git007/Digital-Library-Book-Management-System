@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
+import org.hibernate.annotations.UuidGenerator;
+
+import java.util.UUID;
 
 @Entity
 @Getter
@@ -13,8 +16,9 @@ import lombok.*;
 @Builder
 public class Book {
     @Id
-    @NotBlank(message = "Book ID cannot be blank")
-    private String id;
+    @UuidGenerator
+    @Column(updatable = false, nullable = false)
+    private UUID id;
 
     @NotBlank(message = "Title cannot be blank")
     @Column(nullable = false)
@@ -31,5 +35,3 @@ public class Book {
     @Column(nullable = false)
     private AvailabilityStatus status;
 }
-
-
