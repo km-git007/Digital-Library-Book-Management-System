@@ -1,6 +1,6 @@
 package com.library.bookmanagement.controller;
 
-import com.library.bookmanagement.dto.BookDTO;
+import com.library.bookmanagement.DTOs.BookDTO;
 import com.library.bookmanagement.entity.Book;
 import com.library.bookmanagement.service.BookService;
 import lombok.RequiredArgsConstructor;

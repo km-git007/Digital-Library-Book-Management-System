@@ -1,4 +1,4 @@
-package com.library.bookmanagement.dto;
+package com.library.bookmanagement.DTOs;
 
 import com.library.bookmanagement.entity.AvailabilityStatus;
 import jakarta.validation.constraints.NotBlank;
@@ -7,7 +7,7 @@ import lombok.Builder;
 import lombok.Data;
 
 @Data
-@Builder
+@Builder(toBuilder = true)
 public class BookDTO {
     @NotBlank(message = "Title cannot be blank")
     private String title;
